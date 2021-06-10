@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myfirsapp/utilis/drawer.dart';
 
 void main() => runApp(MaterialApp(
       title: "myApp",
@@ -164,45 +166,46 @@ class HomepageState extends State<Homepage> {
           ],
         ),
       ),
-      drawer: Drawer(
-        child: ListView(padding: EdgeInsets.zero, children: [
-          UserAccountsDrawerHeader(
-            arrowColor: Colors.redAccent,
-            accountName: Text("ManishYadav"),
-            accountEmail: Text("tritech1669@gmail.com"),
-            currentAccountPicture:
-                CircleAvatar(backgroundImage: NetworkImage("")),
-          ),
-          ListTile(
-            leading: Icon(Icons.call),
-            title: Text("Account Holder"),
-            subtitle: Text("personal Details"),
-            trailing: Icon(Icons.call),
-          ),
-          ListTile(
-            leading: Icon(Icons.call),
-            title: Text(" Email"),
-            subtitle: Text("Valid email"),
-            trailing: Icon(Icons.send),
-          ),
-          ListTile(
-            leading: Icon(Icons.call),
-            title: Text(" Help"),
-            subtitle: Text("Only related help"),
-            trailing: Icon(Icons.call),
-          ),
-          ListTile(
-            leading: Icon(Icons.call),
-            title: Text(" Message"),
-            subtitle: Text("Instant reply"),
-            trailing: Icon(Icons.add),
-          ),
-        ]),
-      ),
+
+      // child: ListView(padding: EdgeInsets.zero, children: [
+      //   UserAccuntsDrawerHeader(
+      //     arrowColor: Colors.redAccent,
+      //     accountName: Text("ManishYadav"),
+      //     accountEmail: Text("tritech1669@gmail.com"),
+      //     currentAccountPicture:
+      //         CircleAvatar(backgroundImage: NetworkImage("")),
+      //   ),
+      // ListTile(
+      //     leading: Icon(Icons.call),
+      //     title: Text("Account Holder"),
+      //     subtitle: Text("personal Details"),
+      //     trailing: Icon(Icons.call),
+      //   ),
+      //   ListTile(
+      //     leading: Icon(CupertinoIcons.call),
+      //     title:   Text(" Email"),
+      //     subtitle: Text("Valid email"),
+      //     trailing: Icon(CupertinoIcons.send),
+      //   ),
+      //   ListTile(
+      //     leading: Icon(CupertinoIcons.call),
+      //     title: Text(" Help"),
+      //     subtitle: Text("Only related help"),
+      //     trailing: Icon(CupertinoIcons.call),
+      //   ),
+      //   ListTile(
+      //     leading: Icon(CupertinoIcons.call),
+      //     title: Text(" Message"),
+      //     subtitle: Text("Instant reply"),
+      //     trailing: Icon(CupertinoIcons.bell_circle_fil),
+      //   ),
+      // ]),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.add),
+        child: Icon(CupertinoIcons.add),
       ),
+      drawer: MyDrawer(),
     );
   }
 }
