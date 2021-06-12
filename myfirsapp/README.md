@@ -1,6 +1,9 @@
 # myfirsapp
 
 A new Flutter project.
+" this is my first project in flutter which is just a page and a login page where I have created a card and wrote some sayings ,
+apart from this I have added a drawer and tried too learn basic way to link them
+
 
 ## Getting Started
 
